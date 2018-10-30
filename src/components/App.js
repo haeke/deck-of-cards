@@ -15,7 +15,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this._hadData = true;
     fetchDeck('new', 5).then(hand => {
       this.getCards(hand);
     });
@@ -26,6 +25,7 @@ class App extends React.Component {
   }
 
   getCards = result => {
+    this._hasData = true;
     if (this._hasData) {
       this.setState({
         deck: result,
