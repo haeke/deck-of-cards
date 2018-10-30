@@ -6,7 +6,7 @@
   background: #76b852;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #8DC26F, #76b852);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #8DC26F, #76b852); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .deckHeader {
@@ -28,4 +28,32 @@
   background-color: #282c34;
   color: #fff;
   border-radius: 5px;
+}
+
+img {
+  width: 150px;
+}
+
+@media screen and (max-width: 900px) {
+  .handContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .handContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  img {
+    width: 100px;
+  }
 }

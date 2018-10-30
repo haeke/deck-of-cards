@@ -53,13 +53,13 @@ class App extends React.Component {
     return (
       <div className="appContainer">
         <h2 className="deckHeader">Deck of Cards</h2>
-        {hasData && (
-          <Hand 
-            className="handContainer"
-            cards={cards}
-            deckId={deck_id}
-            remaining={remaining}
-            hasData={hasData} />)}
+          {hasData && (
+            <Hand 
+              className="handContainer"
+              cards={cards}
+              deckId={deck_id}
+              remaining={remaining}
+              hasData={hasData} />)}
         <ButtonGroup className="buttonGroup" getMoreCards={this.getMoreCards} getNewDeck={this.getNewDeck} />
       </div>
     )
