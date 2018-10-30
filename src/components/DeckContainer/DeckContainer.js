@@ -1,15 +1,10 @@
 import React from "react";
-import "./App.css";
-import { fetchDeck } from '../api/api';
-import Hand from './Hand/Hand';
-import ButtonGroup from './ButtonGroup/ButtonGroup';
-import Nav from './Nav/Nav';
+import "./DeckContainer.css";
+import { fetchDeck } from '../../api/api';
+import Hand from '../Hand/Hand';
+import ButtonGroup from '../ButtonGroup/ButtonGroup';
 
-const listObject = [
-  { name: 'About ' },
-];
-
-class App extends React.Component {
+class DeckContainer extends React.Component {
   constructor(props) {
     super(props);
     // used to prevent calling setState when the component unmounts
@@ -57,8 +52,6 @@ class App extends React.Component {
     const { hasData } = this.state;
     return (
       <div className="appContainer">
-          <Nav 
-            className="navContainer" navHeaderClass="deckHeader" headerText="Deck of Cards" unorderedClass="unorderedList" listObject={listObject} />
           {hasData && (
             <Hand 
               className="handContainer"
@@ -72,4 +65,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default DeckContainer;
