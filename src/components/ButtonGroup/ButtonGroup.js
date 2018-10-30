@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Button from './Button';
 
 const ButtonGroup = ({ className, getMoreCards, getNewDeck }) => {
@@ -9,5 +11,17 @@ const ButtonGroup = ({ className, getMoreCards, getNewDeck }) => {
         </div>
     );
 }
+
+ButtonGroup.propTypes = {
+    className: PropTypes.string,
+    getMoreCards: PropTypes.func,
+    getNewDeck: PropTypes.func,
+}
+
+ButtonGroup.defaultProps = {
+    className: '',
+    getMoreCards: undefined,
+    getNewDeck: undefined,
+};
 
 export default ButtonGroup;

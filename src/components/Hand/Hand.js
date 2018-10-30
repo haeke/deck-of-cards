@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './Hand.css';
 
 const Hand = ({ className, cards, remaining }) => {
@@ -14,6 +16,18 @@ const Hand = ({ className, cards, remaining }) => {
             </div>
         </React.Fragment>
     );
+}
+
+Hand.propTypes = {
+    className: PropTypes.string,
+    cards: PropTypes.array,
+    remaining: PropTypes.number,
+}
+
+Hand.defaultProps = {
+    className: '',
+    cards: [],
+    remaining: 0,
 }
 
 export default Hand;
