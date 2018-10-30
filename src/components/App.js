@@ -3,12 +3,11 @@ import "./App.css";
 import { fetchDeck } from '../api/api';
 import Hand from './Hand/Hand';
 
-console.log(fetchDeck);
-
 class App extends React.Component {
   constructor(props) {
     super(props);
-
+    // used to prevent calling setState when the component unmounts
+    this._hasData = false;
     this.state = {
       deck: [],
       hasData: false,
@@ -16,20 +15,23 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this._hadData = true;
     fetchDeck('new', 5).then(hand => {
       this.getCards(hand);
     });
   }
 
   componentWillUnmount() {
-    this.getCards();
+    this._hasData = false;
   }
 
   getCards = result => {
-    this.setState({
-      deck: result,
-      hasData: true,
-    });
+    if (this._hasData) {
+      this.setState({
+        deck: result,
+        hasData: true,
+      });
+    }
   };
 
   getMoreCards = () => {
