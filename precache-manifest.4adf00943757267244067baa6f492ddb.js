@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/deck-of-cards/static/js/runtime~main.f317f0df.js"
   },
   {
-    "revision": "050fd52fc4773273ab6e",
-    "url": "/deck-of-cards/static/js/main.050fd52f.chunk.js"
+    "revision": "121700e2771cacae73ed",
+    "url": "/deck-of-cards/static/js/main.121700e2.chunk.js"
   },
   {
     "revision": "707d06180b9a96fa3ba8",
     "url": "/deck-of-cards/static/js/1.707d0618.chunk.js"
   },
   {
-    "revision": "050fd52fc4773273ab6e",
-    "url": "/deck-of-cards/static/css/main.f902b3fa.chunk.css"
+    "revision": "121700e2771cacae73ed",
+    "url": "/deck-of-cards/static/css/main.ccbf153a.chunk.css"
   },
   {
-    "revision": "5d16b37f2350a5277725d354417615c3",
+    "revision": "297299001b8a27e1a9b0864476a6b71d",
     "url": "/deck-of-cards/index.html"
   }
 ];
