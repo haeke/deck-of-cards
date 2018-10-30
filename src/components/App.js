@@ -3,6 +3,11 @@ import "./App.css";
 import { fetchDeck } from '../api/api';
 import Hand from './Hand/Hand';
 import ButtonGroup from './ButtonGroup/ButtonGroup';
+import Nav from './Nav/Nav';
+
+const listObject = [
+  { name: 'About ' },
+];
 
 class App extends React.Component {
   constructor(props) {
@@ -52,7 +57,8 @@ class App extends React.Component {
     const { hasData } = this.state;
     return (
       <div className="appContainer">
-        <h2 className="deckHeader">Deck of Cards</h2>
+          <Nav 
+            className="navContainer" navHeaderClass="deckHeader" headerText="Deck of Cards" unorderedClass="unorderedList" listObject={listObject} />
           {hasData && (
             <Hand 
               className="handContainer"

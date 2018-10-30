@@ -10,9 +10,9 @@ const Hand = ({ className, cards, remaining }) => {
                 {remaining === 0 ? <div>There are no more cards remaining.</div> : (
                     <Transition
                         items={cards} keys={card => card.image}
-                        from={{  opacity: 0 }}
+                        from={{ opacity: 0 }}
                         enter={{ opacity: 1 }}
-                        leave={{ opacity: 0 }}>
+                        leave={{ position: 'absolute', opacity: 0 }}>
                         {card => props => <div style={props}><img src={card.image} alt={card.image} /></div>}
                         </Transition>
                 )}

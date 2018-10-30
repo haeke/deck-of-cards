@@ -5,9 +5,11 @@
   "homepage": "https://haeke.github.io/deck-of-cards",
   "dependencies": {
     "babel-loader": "^8.0.4",
+    "classnames": "^2.2.6",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
     "react-spring": "^6.1.4"
   },
