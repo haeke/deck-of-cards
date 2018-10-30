@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { fetchDeck } from '../api/api';
 import Hand from './Hand/Hand';
+import ButtonGroup from './ButtonGroup/ButtonGroup';
 
 class App extends React.Component {
   constructor(props) {
@@ -40,6 +41,12 @@ class App extends React.Component {
       this.getCards(hand);
     });
   }
+
+  getNewDeck = () => {
+    fetchDeck('new', 5).then(hand => {
+      this.getCards(hand);
+    });
+  }
   render() {
     const { cards, deck_id, remaining } = this.state.deck;
     const { hasData } = this.state;
@@ -53,7 +60,7 @@ class App extends React.Component {
             deckId={deck_id}
             remaining={remaining}
             hasData={hasData} />)}
-        <button onClick={this.getMoreCards} className="deckButton">New Hand</button>
+        <ButtonGroup className="buttonGroup" getMoreCards={this.getMoreCards} getNewDeck={this.getNewDeck} />
       </div>
     )
   }
