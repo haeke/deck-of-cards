@@ -4,7 +4,7 @@
 
 # Github Pages URL
 
-https://haeke.github.io/deck-of-cards/4
+https://haeke.github.io/deck-of-cards
 
 #Technologies Used
 
