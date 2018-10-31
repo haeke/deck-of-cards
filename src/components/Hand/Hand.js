@@ -6,8 +6,9 @@ import './Hand.css';
 const Hand = ({ className, cards, remaining }) => {
     return (
         <React.Fragment>
-            <div className={className}>
+            <div style={{ minHeight: 300 }}>
                 {remaining === 0 ? <div>There are no more cards remaining.</div> : (
+                    <div className={className}>
                     <Transition
                         items={cards} keys={card => card.image}
                         from={{ opacity: 0 }}
@@ -15,6 +16,7 @@ const Hand = ({ className, cards, remaining }) => {
                         leave={{ position: 'absolute', opacity: 0 }}>
                         {card => props => <div style={props}><img src={card.image} alt={card.image} /></div>}
                         </Transition>
+                    </div>
                 )}
             </div>
             <div>
